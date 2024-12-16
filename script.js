@@ -64,3 +64,5 @@ console.log(result5)
 
 const result5Again = checkOleg(data);
 console.log(result5Again);
+
+sortAge(data)
