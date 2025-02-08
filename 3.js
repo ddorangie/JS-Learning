@@ -6,18 +6,17 @@ const arr2 = [1, 2, 4, 7, 8];
 // должно получиться [2,3,5,7,8]
 
 
-const arr3 = arr1.concat(arr2)
-console.log(arr3)
+function makeArrayWithoutDuplicate(array1, array2) {
+    const array3 = (array1.concat(array2)).sort();
+    let resultArr = [];
+    for (let i = 0; i < array3.length; i++) {
+        if (array3[i] !== array3[i+1] && array3[i] !== array3[i-1]) {
+            resultArr.push(array3[i])
+        };
+    };
+    return resultArr
+};
 
-let result = arr3.sort()
-console.log(result)
-let newArr = []
+let result = makeArrayWithoutDuplicate(arr1, arr2);
+console.log(result);
 
-for (let i = 0; i < arr3.length; i++) {
-    
-    if (arr3[i] > arr3[i - 1] || arr3[i] < arr3[i-1]) {
-        newArr.push(arr3[i])
-    }
-}
-
-console.log(newArr)
