@@ -43,3 +43,63 @@ let result2 = getDuplicate(arr1, arr2);
 console.log(result2);
 
 
+// 3 Задача со *
+//Изначально дан такой массив объектов(arr3), его нужно будет преобразовать в другой формат который принимает график(arr4),
+//необходимо написать функцию которая будет преобразовывать данные в данный формат
+
+const arr3 = [
+    {
+        name:"Vladimir",
+        count: 5, // яблоки
+        day: "mon",
+    },
+    {
+        name:"Julia",
+        count: 2,
+        day: "mon",
+    },
+    {
+        name:"Angelina",
+        count: 4,
+        day: "mon",
+    },
+    {
+        name:"Vladimir",
+        count: 1,
+        day: "tue",
+    },
+    {
+        name:"Julia",
+        count: 8,
+        day: "tue",
+    },
+    {
+        name:"Angelina",
+        count: 7,
+        day: "tue",
+    },
+]
+
+const arr4 = [
+    {
+        name:"Vladimir",
+        data:{
+            mon: 5
+            tue: 1
+        }
+    },
+    {
+        name:"Julia",
+        data:{
+            mon: 2
+            tue: 8
+        }
+    },
+    {
+        name:"Angelina",
+        data:{
+            mon: 4
+            tue: 7
+        }
+    },
+]
