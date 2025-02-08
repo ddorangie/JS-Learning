@@ -5,11 +5,6 @@ const arr2 = [1, 2, 4, 7, 8];
 // Создать функцию которая будет принимать два массива и возвращать новый массив без повторяющихся элементов
 // должно получиться [2,3,5,7,8]
 
-function sortArray (array1, array2) {
-    let array = new Set (array1.concat(array2));
-    return array;
-};
 
-let result = sortArray(arr1, arr2)
-console.log(result)
+const arr3 = 
 
