@@ -84,22 +84,42 @@ const arr4 = [
     {
         name:"Vladimir",
         data:{
-            mon: 5
+            mon: 5,
             tue: 1
         }
     },
     {
         name:"Julia",
         data:{
-            mon: 2
+            mon: 2,
             tue: 8
         }
     },
     {
         name:"Angelina",
         data:{
-            mon: 4
+            mon: 4,
             tue: 7
         }
     },
 ]
+
+
+function transformData(arr3) {
+    const temp = {};
+    arr3.forEach(item => {
+        if (temp[item.name]) {
+            temp[item.name].data[item.day] = item.count;
+        } else {
+            temp[item.name] = {
+                name: item.name,
+                data: { [item.day]: item.count}
+            };
+        };
+    });
+    const arr4 = Object.values(temp)
+    return arr4;
+};
+
+const result3 = transformData(arr3);
+console.log(result3)
