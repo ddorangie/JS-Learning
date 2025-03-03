@@ -48,21 +48,21 @@ console.log(result4)
 с именем Oleg, если нет - вернуть - "Человека с именем Oleg нет в списке"
 (потом добавить его и проверить еще раз, вывести - "человек с именем Oleg найден
 его возраст - 24, работа - inginier") */
-function checkOleg (array) {
-        const person = array.find(item => item.name === "Oleg");
+function checkGuy (array, name, job, age) {
+        const person = array.find(item => item.name === name);
         if (person) {
-            return `человек с именем Oleg найден, его возраст - ${person.age}, работа - ${person.job}`;
+            return `человек с именем ${name} найден, его возраст - ${person.age}, работа - ${person.job}`;
         } else {
-            const newPerson = {id: array.length + 1, name: "Oleg", job: "inginier", age: 24};
+            const newPerson = {id: array.length + 1, name: name, job: job, age: age};
             array.push(newPerson);
-            return 'Человека с именем Oleg нет в списке'
+            return `Человека с именем ${name} нет в списке`
         }
 }
 
-const result5 = checkOleg(data);
+const result5 = checkGuy(data, 'Oleg', 'inginier', 24);
 console.log(result5)
 
-const result5Again = checkOleg(data);
+const result5Again = checkGuy(data, 'Oleg', 'inginier', 24);
 console.log(result5Again);
 
 sortAge(data)
